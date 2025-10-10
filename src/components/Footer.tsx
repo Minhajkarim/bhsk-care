@@ -1,61 +1,81 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Heart, Sparkles } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-background-alt border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-b from-background-alt to-background border-t border-border/50 relative overflow-hidden">
+      {/* Modern background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(217,91%,60%,0.1),transparent_50%)]" />
+      </div>
+      
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-lg font-bold text-primary-foreground">BH</span>
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-14 h-14 logo-container rounded-2xl overflow-hidden relative border-2 border-primary/20 hover:border-primary/40 transition-all duration-300">
+                <img 
+                  src={logo} 
+                  alt="BHSK Health Services Logo" 
+                  className="logo-img w-full h-full object-contain p-2 hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                <Sparkles className="w-4 h-4 text-primary absolute -top-1 -right-1 animate-pulse" />
               </div>
-              <h3 className="text-lg font-bold">BHSK Health Services</h3>
+              <div>
+                <h3 className="text-lg font-bold text-foreground">BHSK Health Services</h3>
+                <p className="text-xs text-muted-foreground">Caring Hands, Healing Hearts</p>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Caring Hands, Healing Hearts. Professional home nursing and elderly care services in Qatar.
+            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              Professional home nursing and elderly care services in Qatar. Delivering compassionate, 
+              expert healthcare solutions right to your doorstep.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="p-2 bg-background rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
-                <Facebook className="w-4 h-4" />
+              <a href="#" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
+                <Facebook className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="#" className="p-2 bg-background rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
-                <Instagram className="w-4 h-4" />
+              <a href="#" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
+                <Instagram className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="#" className="p-2 bg-background rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
-                <Linkedin className="w-4 h-4" />
+              <a href="#" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
+                <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="font-bold mb-6 text-foreground flex items-center">
+              <Heart className="w-4 h-4 mr-2 text-primary" />
+              Quick Links
+            </h3>
+            <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/faq" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
                   FAQ
                 </Link>
               </li>
@@ -64,36 +84,53 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Home Nursing</li>
-              <li>Elderly Care</li>
-              <li>Post-Surgery Care</li>
-              <li>Baby Care & Babysitting</li>
-              <li>Physiotherapy</li>
+            <h3 className="font-bold mb-6 text-foreground flex items-center">
+              <Heart className="w-4 h-4 mr-2 text-secondary" />
+              Our Services
+            </h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Home Nursing</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Elder Care</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Neonatal Care</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Palliative Care</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Pregnancy Care</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">School Nurse</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Industrial Nurse</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Travel Care</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Post-Operative Care</li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">Physiotherapy</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Phone className="w-4 h-4 mr-2 mt-1 text-primary" />
+            <h3 className="font-bold mb-6 text-foreground flex items-center">
+              <Heart className="w-4 h-4 mr-2 text-accent" />
+              Contact Us
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start group">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-3 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
+                  <Phone className="w-4 h-4 text-primary" />
+                </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">+974 1234 5678</p>
-                  <p className="text-sm text-muted-foreground">+974 0000 0000</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">+974 1234 5678</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">+974 0000 0000</p>
                 </div>
               </li>
-              <li className="flex items-start">
-                <Mail className="w-4 h-4 mr-2 mt-1 text-primary" />
-                <a href="mailto:info@bhskhealth.qa" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <li className="flex items-start group">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-3 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
+                  <Mail className="w-4 h-4 text-primary" />
+                </div>
+                <a href="mailto:info@bhskhealth.qa" className="text-sm text-muted-foreground hover:text-primary transition-colors group-hover:text-foreground">
                   info@bhskhealth.qa
                 </a>
               </li>
-              <li className="flex items-start">
-                <MapPin className="w-4 h-4 mr-2 mt-1 text-primary" />
-                <p className="text-sm text-muted-foreground">
+              <li className="flex items-start group">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-3 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
+                  <MapPin className="w-4 h-4 text-primary" />
+                </div>
+                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                   Doha, Qatar
                 </p>
               </li>
@@ -101,9 +138,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} BHSK Health Services. All rights reserved.
+        <div className="mt-12 pt-8 border-t border-border/50 text-center">
+          <div className="flex items-center justify-center mb-4">
+            <Heart className="w-4 h-4 text-primary mr-2 animate-pulse" />
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} BHSK Health Services. All rights reserved.
+            </p>
+            <Heart className="w-4 h-4 text-primary ml-2 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          </div>
+          <p className="text-xs text-muted-foreground">
+            Licensed Healthcare Provider | Ministry of Public Health Qatar
           </p>
         </div>
       </div>
