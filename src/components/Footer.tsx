@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Heart, Sparkles } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -15,19 +15,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-14 h-14 logo-container rounded-2xl overflow-hidden relative border-2 border-primary/20 hover:border-primary/40 transition-all duration-300">
+            <div className="flex items-center mb-6">
+              <div className="w-14 h-14 overflow-hidden relative">
                 <img 
                   src={logo} 
                   alt="BHSK Health Services Logo" 
-                  className="logo-img w-full h-full object-contain p-2 hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-contain p-2 hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                <Sparkles className="w-4 h-4 text-primary absolute -top-1 -right-1 animate-pulse" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-foreground">BHSK Health Services</h3>
-                <p className="text-xs text-muted-foreground">Caring Hands, Healing Hearts</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
@@ -114,16 +108,16 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">+974 1234 5678</p>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">+974 0000 0000</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">0097431599965</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">0097431331146</p>
                 </div>
               </li>
               <li className="flex items-start group">
                 <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-3 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
-                <a href="mailto:info@bhskhealth.qa" className="text-sm text-muted-foreground hover:text-primary transition-colors group-hover:text-foreground">
-                  info@bhskhealth.qa
+                <a href="mailto:bhsknursingservices@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors group-hover:text-foreground">
+                  bhsknursingservices@gmail.com
                 </a>
               </li>
               <li className="flex items-start group">

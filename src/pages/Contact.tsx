@@ -35,14 +35,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+974 1234 5678", "+974 9876 5432"],
-      action: "tel:+97412345678",
+      details: ["0097431599965", "0097431331146"],
+      action: "tel:0097431599965",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@bhskhealth.qa", "support@bhskhealth.qa"],
-      action: "mailto:info@bhskhealth.qa",
+      details: ["bhsknursingservices@gmail.com"],
+      action: "mailto:bhsknursingservices@gmail.com",
     },
     {
       icon: MapPin,
@@ -200,7 +200,7 @@ const Contact = () => {
 
               <div className="space-y-4 mb-8">
                 <a
-                  href="https://wa.me/97412345678?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                  href="https://wa.me/97431599965?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center p-6 bg-[#25D366] text-white rounded-xl hover:shadow-card transition-all"
@@ -213,24 +213,24 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="tel:+97412345678"
+                  href="tel:0097431599965"
                   className="flex items-center p-6 bg-primary text-primary-foreground rounded-xl hover:shadow-card transition-all"
                 >
                   <Phone className="w-8 h-8 mr-4" />
                   <div>
                     <h3 className="font-semibold text-lg">Call Us</h3>
-                    <p className="text-sm opacity-90">+974 1234 5678</p>
+                    <p className="text-sm opacity-90">0097431599965</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:info@bhskhealth.qa"
+                  href="mailto:bhsknursingservices@gmail.com"
                   className="flex items-center p-6 bg-secondary text-secondary-foreground rounded-xl hover:shadow-card transition-all"
                 >
                   <Mail className="w-8 h-8 mr-4" />
                   <div>
                     <h3 className="font-semibold text-lg">Email Us</h3>
-                    <p className="text-sm opacity-90">info@bhskhealth.qa</p>
+                    <p className="text-sm opacity-90">bhsknursingservices@gmail.com</p>
                   </div>
                 </a>
               </div>

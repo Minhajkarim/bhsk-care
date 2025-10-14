@@ -4,6 +4,14 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Heart, Users, Stethoscope, Baby, Activity, Phone, GraduationCap, Building, Plane, Scissors } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import nurseImage from "@/assets/nurse-professional.jpg";
+import elderlyImage from "@/assets/elderly-care.jpg";
+import neonatalImage from "@/assets/neonatal.jpg";
+import palliativeCareImage from "@/assets/palliative-care.jpg";
+import schoolNurseImage from "@/assets/school-nurse.jpg";
+import industrialNursingImage from "@/assets/industrial-nursing.jpg";
+import travelCareImage from "@/assets/travel-care.jpeg";
+import postOperativeImage from "@/assets/Post-Operative Care.jpg";
 
 const Home = () => {
   const services = [
@@ -11,48 +19,64 @@ const Home = () => {
       icon: Stethoscope,
       title: "Home Nursing",
       description: "Professional nursing care in the comfort of your home",
+      image: nurseImage,
+      imageAlt: "Professional nurse providing home care",
       features: ["Certified nurses", "24/7 availability", "Medication management", "Wound care"],
     },
     {
       icon: Heart,
       title: "Elder Care",
       description: "Comprehensive care for senior citizens",
+      image: elderlyImage,
+      imageAlt: "Elderly care services",
       features: ["Personal care assistance", "Companionship", "Mobility support", "Nutrition monitoring"],
     },
     {
       icon: Baby,
       title: "Neonatal Care",
       description: "Specialized care for newborns and infants",
+      image: neonatalImage,
+      imageAlt: "Neonatal care services",
       features: ["Newborn monitoring", "Feeding support", "Parent education", "Developmental assessments"],
     },
     {
       icon: Users,
       title: "Palliative Care",
       description: "Comfort and support for serious illnesses",
+      image: palliativeCareImage,
+      imageAlt: "Palliative care services",
       features: ["Pain management", "Emotional support", "Family counseling", "Quality of life"],
     },
     {
       icon: GraduationCap,
       title: "School Nurse",
       description: "Healthcare services for educational institutions",
+      image: schoolNurseImage,
+      imageAlt: "School nursing services",
       features: ["Student health assessments", "Emergency first aid", "Health education", "Immunization"],
     },
     {
       icon: Building,
       title: "Industrial Nurse",
       description: "Workplace health and safety services",
+      image: industrialNursingImage,
+      imageAlt: "Industrial nursing services",
       features: ["Occupational health", "Injury management", "Safety training", "Wellness programs"],
     },
     {
       icon: Plane,
       title: "Travel Care",
       description: "Healthcare support for travelers",
+      image: travelCareImage,
+      imageAlt: "Travel care services",
       features: ["Pre-travel consultations", "Vaccination services", "Medical escort", "Emergency support"],
     },
     {
       icon: Scissors,
       title: "Post-Operative Care",
       description: "Comprehensive recovery support after surgery",
+      image: postOperativeImage,
+      imageAlt: "Post-operative care services",
       features: ["Wound care", "Pain management", "Mobility assistance", "Follow-up coordination"],
     },
   ];
@@ -265,7 +289,7 @@ const Home = () => {
                 <Link to="/contact">Book Appointment</Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:+97412345678">Call Us Now</a>
+                <a href="tel:0097431599965">Call Us Now</a>
               </Button>
             </div>
           </div>

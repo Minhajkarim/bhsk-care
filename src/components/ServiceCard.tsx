@@ -6,9 +6,11 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, features, image, imageAlt }: ServiceCardProps) => {
   return (
     <Card className="group h-full bg-gradient-card border-border/50 hover:border-primary/20 hover:shadow-hover transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
       {/* Modern gradient overlay */}
@@ -16,6 +18,18 @@ const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardPr
       
       {/* Floating icon background */}
       <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-float" />
+      
+      {/* Service Image */}
+      {image && (
+        <div className="relative h-48 overflow-hidden">
+          <img 
+            src={image} 
+            alt={imageAlt || title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        </div>
+      )}
       
       <CardHeader className="relative z-10 pb-4">
         <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-glow group-hover:shadow-glow group-hover:animate-pulse-glow transition-all duration-500">

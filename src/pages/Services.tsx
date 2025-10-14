@@ -20,7 +20,18 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import elderlyImage from "@/assets/elderly-care.jpg";
-import physioImage from "@/assets/physiotherapy.jpg";
+import physioImage from "@/assets/Physiotherapy.jpg";
+import nurseImage from "@/assets/nurse-professional.jpg";
+import heroImage from "@/assets/hero-image.jpg";
+import babyCareImage from "@/assets/Baby Care & Babysitting.jpg";
+import chronicDiseaseImage from "@/assets/Chronic Disease Management.png";
+import industrialNursingImage from "@/assets/industrial-nursing.jpg";
+import neonatalImage from "@/assets/neonatal.jpg";
+import palliativeCareImage from "@/assets/palliative-care.jpg";
+import postOperativeImage from "@/assets/Post-Operative Care.jpg";
+import pregnancyImage from "@/assets/pregnancy.jpg";
+import schoolNurseImage from "@/assets/school-nurse.jpg";
+import travelCareImage from "@/assets/travel-care.jpeg";
 
 const Services = () => {
   const mainServices = [
@@ -28,6 +39,8 @@ const Services = () => {
       icon: Stethoscope,
       title: "Home Nursing",
       description: "Professional nursing care delivered at your home",
+      image: nurseImage,
+      imageAlt: "Professional nurse providing home care",
       features: [
         "Medication administration and management",
         "Vital signs monitoring",
@@ -40,6 +53,8 @@ const Services = () => {
       icon: Heart,
       title: "Elder Care",
       description: "Comprehensive care for senior citizens",
+      image: elderlyImage,
+      imageAlt: "Elderly care services",
       features: [
         "Personal hygiene assistance",
         "Mobility and transfer support",
@@ -52,6 +67,8 @@ const Services = () => {
       icon: Baby,
       title: "Neonatal Care",
       description: "Specialized care for newborns and infants",
+      image: neonatalImage,
+      imageAlt: "Neonatal care services",
       features: [
         "Newborn health monitoring",
         "Feeding support and guidance",
@@ -64,6 +81,8 @@ const Services = () => {
       icon: Users,
       title: "Palliative Care",
       description: "Comfort and support for serious illnesses",
+      image: palliativeCareImage,
+      imageAlt: "Palliative care services",
       features: [
         "Pain and symptom management",
         "Emotional and spiritual support",
@@ -76,6 +95,8 @@ const Services = () => {
       icon: Heart,
       title: "Pregnancy Care",
       description: "Comprehensive maternal health support",
+      image: pregnancyImage,
+      imageAlt: "Pregnancy care services",
       features: [
         "Prenatal health monitoring",
         "Postpartum care and recovery",
@@ -88,6 +109,8 @@ const Services = () => {
       icon: GraduationCap,
       title: "School Nurse",
       description: "Healthcare services for educational institutions",
+      image: schoolNurseImage,
+      imageAlt: "School nursing services",
       features: [
         "Student health assessments",
         "Emergency first aid",
@@ -100,6 +123,8 @@ const Services = () => {
       icon: Building,
       title: "Industrial Nurse",
       description: "Workplace health and safety services",
+      image: industrialNursingImage,
+      imageAlt: "Industrial nursing services",
       features: [
         "Occupational health assessments",
         "Workplace injury management",
@@ -112,6 +137,8 @@ const Services = () => {
       icon: Plane,
       title: "Travel Care",
       description: "Healthcare support for travelers",
+      image: travelCareImage,
+      imageAlt: "Travel care services",
       features: [
         "Pre-travel health consultations",
         "Travel vaccination services",
@@ -124,6 +151,8 @@ const Services = () => {
       icon: Scissors,
       title: "Post-Operative Care",
       description: "Comprehensive recovery support after surgery",
+      image: postOperativeImage,
+      imageAlt: "Post-operative care services",
       features: [
         "Wound care and monitoring",
         "Pain management",
@@ -136,6 +165,8 @@ const Services = () => {
       icon: Activity,
       title: "Physiotherapy",
       description: "Expert rehabilitation and physical therapy",
+      image: physioImage,
+      imageAlt: "Physiotherapy services",
       features: [
         "Post-surgery rehabilitation",
         "Stroke recovery programs",
@@ -148,6 +179,8 @@ const Services = () => {
       icon: Pill,
       title: "Chronic Disease Management",
       description: "Ongoing care for chronic conditions",
+      image: chronicDiseaseImage,
+      imageAlt: "Chronic disease management",
       features: [
         "Diabetes care and monitoring",
         "Hypertension management",
@@ -160,6 +193,8 @@ const Services = () => {
       icon: Baby,
       title: "Baby Care & Babysitting",
       description: "Professional care for infants and children",
+      image: babyCareImage,
+      imageAlt: "Baby care and babysitting services",
       features: [
         "Infant care and support",
         "Feeding and nutrition guidance",
@@ -223,7 +258,7 @@ const Services = () => {
                 className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary backdrop-blur-sm px-8 py-4 text-lg font-semibold transition-all duration-300" 
                 asChild
               >
-                <a href="tel:+97412345678">Call Us: +974 1234 5678</a>
+                <a href="tel:0097431599965">Call Us: 0097431599965</a>
               </Button>
             </div>
           </div>
@@ -338,7 +373,7 @@ const Services = () => {
                 <Link to="/contact">Book Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:+97412345678">Call Us: +974 1234 5678</a>
+                <a href="tel:0097431599965">Call Us: 0097431599965</a>
               </Button>
             </div>
           </div>

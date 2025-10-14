@@ -10,64 +10,24 @@ import { Link } from "react-router-dom";
 const FAQ = () => {
   const faqs = [
     {
-      question: "What services does BHSK Health Services offer?",
-      answer: "We offer comprehensive home healthcare services including home nursing, elderly care, post-surgery care, baby care and babysitting, physiotherapy, chronic disease management, and 24/7 emergency care. Each service is delivered by certified healthcare professionals in the comfort of your home."
+      question: "Are your home care services hourly?",
+      answer: "We provide services hourly, 12 hours, 24 hours, weekly, and monthly packages to provide you the best price to match your needs."
     },
     {
-      question: "Are your nurses and caregivers certified?",
-      answer: "Yes, all our nurses and caregivers are fully certified, licensed, and have undergone extensive background checks. They have relevant qualifications and experience in their specialties, and participate in ongoing training to maintain the highest standards of care."
+      question: "Can you train my helper or myself to take care of my mother and father?",
+      answer: "Yes we can provide basic nursing training. We can also provide one on one training."
     },
     {
-      question: "What areas in Qatar do you serve?",
-      answer: "We provide services throughout Doha and surrounding areas in Qatar. Our team is available 24/7 to reach clients across the region. Contact us to confirm service availability in your specific location."
+      question: "Are your nurses licensed?",
+      answer: "All our registered nurses are licensed. The nurses go through a selection and training process to be part of our team."
     },
     {
-      question: "How quickly can you provide a nurse?",
-      answer: "For urgent needs, we can typically arrange for a nurse within 2-4 hours. For scheduled care, we recommend booking at least 24 hours in advance to ensure we match you with the most appropriate healthcare professional for your needs."
+      question: "Can a nurse be available to a patient while in hospital?",
+      answer: "Yes. Our dedicated nurses are available to patients in hospital to bring familiarity and extra support to the patient."
     },
     {
-      question: "What are your service hours?",
-      answer: "Our healthcare services are available 24/7, every day of the year. Our administrative office operates from 8 AM to 6 PM, but you can reach our emergency hotline anytime for urgent care needs or after-hours assistance."
-    },
-    {
-      question: "How much do your services cost?",
-      answer: "Our pricing varies depending on the type of service, duration, and specific care requirements. We offer competitive rates and flexible packages including hourly, daily, weekly, and monthly options. Contact us for a personalized quote based on your specific needs."
-    },
-    {
-      question: "Do you accept insurance?",
-      answer: "Yes, we work with most major insurance providers in Qatar. We can also provide detailed invoices for insurance reimbursement. Please contact us with your insurance details, and our team will help determine coverage options."
-    },
-    {
-      question: "Can I request a specific nurse or caregiver?",
-      answer: "Absolutely! If you develop a good rapport with a particular nurse or caregiver, you can request them for future appointments. We do our best to maintain continuity of care and match you with professionals who best suit your needs and preferences."
-    },
-    {
-      question: "What is included in elderly care services?",
-      answer: "Our elderly care services include personal hygiene assistance, mobility support, medication management, meal preparation, companionship, health monitoring, and coordination with healthcare providers. We create personalized care plans based on individual needs and family preferences."
-    },
-    {
-      question: "Do you provide post-surgery care?",
-      answer: "Yes, we specialize in post-surgery care including wound care, pain management, medication administration, mobility assistance, and monitoring for complications. Our nurses work closely with your surgical team to ensure proper recovery."
-    },
-    {
-      question: "What qualifications do your physiotherapists have?",
-      answer: "Our physiotherapists are licensed healthcare professionals with degrees in physiotherapy and additional specialized training. They have experience treating various conditions including post-surgical recovery, sports injuries, stroke rehabilitation, and chronic pain management."
-    },
-    {
-      question: "Can you help with chronic disease management?",
-      answer: "Yes, we provide ongoing support for chronic conditions such as diabetes, hypertension, heart disease, and COPD. Our services include regular monitoring, medication management, lifestyle guidance, and coordination with your primary physician."
-    },
-    {
-      question: "Is someone available 24/7 for emergencies?",
-      answer: "Yes, our emergency hotline is staffed 24/7. We can dispatch nurses quickly for urgent situations and provide immediate guidance over the phone until help arrives."
-    },
-    {
-      question: "How do I book your services?",
-      answer: "You can book our services by calling us at +974 1234 5678, sending a WhatsApp message, emailing info@bhskhealth.qa, or filling out the contact form on our website. Our team will discuss your needs and arrange appropriate care."
-    },
-    {
-      question: "Do you provide equipment for home care?",
-      answer: "Yes, we can provide or help arrange necessary medical equipment such as wheelchairs, hospital beds, oxygen concentrators, and mobility aids. We also advise on home modifications for safety and accessibility."
+      question: "How do you maintain privacy and confidentiality?",
+      answer: "The data and medical records are maintained with strict confidentiality. Our internal policies and guidelines give access only to relevant clinical personnel."
     },
   ];
 
@@ -123,7 +83,7 @@ const FAQ = () => {
                 <Link to="/contact">Contact Us</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:+97412345678">Call +974 1234 5678</a>
+                <a href="tel:0097431599965">Call 0097431599965</a>
               </Button>
             </div>
           </div>
