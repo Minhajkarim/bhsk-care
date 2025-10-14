@@ -11,7 +11,7 @@ import palliativeCareImage from "@/assets/palliative-care.jpg";
 import schoolNurseImage from "@/assets/school-nurse.jpg";
 import industrialNursingImage from "@/assets/industrial-nursing.jpg";
 import travelCareImage from "@/assets/travel-care.jpeg";
-import postOperativeImage from "@/assets/Post-Operative Care.jpg";
+import postOperativeImage from "@/assets/post-operative-care.jpg";
 
 const Home = () => {
   const services = [
