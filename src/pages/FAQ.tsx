@@ -6,40 +6,42 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FAQ = () => {
+  const { t, isRTL } = useLanguage();
   const faqs = [
     {
-      question: "Are your home care services hourly?",
-      answer: "We provide services hourly, 12 hours, 24 hours, weekly, and monthly packages to provide you the best price to match your needs."
+      question: t('faq.question1'),
+      answer: t('faq.answer1')
     },
     {
-      question: "Can you train my helper or myself to take care of my mother and father?",
-      answer: "Yes we can provide basic nursing training. We can also provide one on one training."
+      question: t('faq.question2'),
+      answer: t('faq.answer2')
     },
     {
-      question: "Are your nurses licensed?",
-      answer: "All our registered nurses are licensed. The nurses go through a selection and training process to be part of our team."
+      question: t('faq.question3'),
+      answer: t('faq.answer3')
     },
     {
-      question: "Can a nurse be available to a patient while in hospital?",
-      answer: "Yes. Our dedicated nurses are available to patients in hospital to bring familiarity and extra support to the patient."
+      question: t('faq.question4'),
+      answer: t('faq.answer4')
     },
     {
-      question: "How do you maintain privacy and confidentiality?",
-      answer: "The data and medical records are maintained with strict confidentiality. Our internal policies and guidelines give access only to relevant clinical personnel."
+      question: t('faq.question5'),
+      answer: t('faq.answer5')
     },
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl text-primary-foreground animate-fade-in">
-            <h1 className="mb-6">Frequently Asked Questions</h1>
+            <h1 className="mb-6">{t('faq.hero.title')}</h1>
             <p className="text-xl text-primary-foreground/90">
-              Find answers to common questions about our home healthcare services in Qatar.
+              {t('faq.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -74,16 +76,16 @@ const FAQ = () => {
       <section className="py-20 bg-background-alt">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-fade-in">
-            <h2 className="mb-6">Still Have Questions?</h2>
+            <h2 className="mb-6">{t('faq.still.title')}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Can't find the answer you're looking for? Our friendly team is here to help.
+              {t('faq.still.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact">{t('common.contact_us')}</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:0097431599965">Call 0097431599965</a>
+                <a href="tel:0097431599965">{t('common.call_us')} 31599965</a>
               </Button>
             </div>
           </div>
@@ -94,7 +96,7 @@ const FAQ = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-8 text-center">Explore More</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center">{t('faq.explore.title')}</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <Link to="/services" className="p-6 bg-background-alt rounded-xl border border-border hover:shadow-card transition-all text-center">
                 <h4 className="font-semibold mb-2">Our Services</h4>

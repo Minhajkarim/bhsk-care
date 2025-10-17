@@ -2,18 +2,21 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" },
-    { name: "FAQ", path: "/faq" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.about'), path: "/about" },
+    { name: t('nav.services'), path: "/services" },
+    { name: t('nav.contact'), path: "/contact" },
+    { name: t('nav.faq'), path: "/faq" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -54,11 +57,12 @@ const Navbar = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
+            <LanguageSwitcher />
             <a href="tel:0097431599965" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-all duration-300 group">
               <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-2 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
                 <Phone className="w-4 h-4" />
               </div>
-              <span className="font-medium">0097431599965</span>
+              <span className="font-medium">31599965</span>
             </a>
             <Button variant="default" size="default" className="bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-light shadow-glow hover:shadow-glow hover:animate-pulse-glow transition-all duration-300" asChild>
               <Link to="/contact">Book a Nurse</Link>
@@ -91,11 +95,14 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t border-border/50 px-4">
+                <div className="mb-4">
+                  <LanguageSwitcher />
+                </div>
                 <a href="tel:0097431599965" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-all duration-300 mb-4 p-3 rounded-xl hover:bg-primary/5">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-3">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <span className="font-medium">0097431599965</span>
+                  <span className="font-medium">31599965</span>
                 </a>
                 <Button variant="default" size="default" className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-light shadow-glow hover:shadow-glow transition-all duration-300" asChild>
                   <Link to="/contact" onClick={() => setIsOpen(false)}>Book a Nurse</Link>

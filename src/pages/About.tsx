@@ -1,16 +1,20 @@
-import { Heart, Target, Eye, Award } from "lucide-react";
+import { Heart, Target, Eye, Award, Shield, Clock, Users, Phone, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import nurseImage from "@/assets/nurse-professional.jpg";
 
 const About = () => {
+  const { t, isRTL } = useLanguage();
+  
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl text-primary-foreground animate-fade-in">
-            <h1 className="mb-6">About BHSK Health Services</h1>
+            <h1 className="mb-6">{t('about.hero.title')}</h1>
             <p className="text-xl text-primary-foreground/90">
-              Delivering excellence in home healthcare services across Qatar since 2014.
+              {t('about.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -21,15 +25,15 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="mb-6">Our Story</h2>
+              <h2 className="mb-6">{t('about.story.title')}</h2>
               <p className="text-muted-foreground mb-4">
-                BHSK Health Services was founded with a simple yet powerful mission: to bring professional healthcare services directly to families in Qatar. We recognized the growing need for quality home-based care and set out to create a service that combines medical expertise with genuine compassion.
+                {t('about.story.content1')}
               </p>
               <p className="text-muted-foreground mb-4">
-                Over the years, we've grown from a small team to become one of Qatar's most trusted home healthcare providers. Our success is built on the trust our clients place in us and the dedication of our healthcare professionals.
+                {t('about.story.content2')}
               </p>
               <p className="text-muted-foreground">
-                Today, we serve hundreds of families across Qatar, providing comprehensive nursing, elderly care, physiotherapy, and specialized healthcare services. Every member of our team shares our commitment to excellence and our belief that everyone deserves access to quality healthcare in the comfort of their own home.
+                {t('about.story.content3')}
               </p>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -51,18 +55,18 @@ const About = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 shadow-soft">
                 <Target className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-semibold mb-4">{t('about.mission.title')}</h3>
               <p className="text-muted-foreground">
-                To provide exceptional home healthcare services that improve the quality of life for our clients. We strive to deliver professional, compassionate care that meets the unique needs of each individual and family we serve, while maintaining the highest standards of medical excellence and ethical practice.
+                {t('about.mission.content')}
               </p>
             </div>
             <div className="bg-background p-8 rounded-2xl shadow-soft hover:shadow-card transition-all animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 shadow-soft">
                 <Eye className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-semibold mb-4">{t('about.vision.title')}</h3>
               <p className="text-muted-foreground">
-                To be the leading provider of home healthcare services in Qatar, recognized for our commitment to quality, innovation, and patient satisfaction. We envision a future where every person has access to professional healthcare services in the comfort and dignity of their own home.
+                {t('about.vision.content')}
               </p>
             </div>
           </div>
@@ -73,32 +77,32 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="mb-4">Our Core Values</h2>
+            <h2 className="mb-4">{t('about.values.title')}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              These principles guide everything we do and every decision we make.
+              {t('about.values.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Heart,
-                title: "Compassion",
-                description: "We care deeply about every patient and treat them with dignity and respect."
+                title: t('about.values.compassion.title'),
+                description: t('about.values.compassion.desc')
               },
               {
                 icon: Award,
-                title: "Excellence",
-                description: "We maintain the highest standards in all aspects of our healthcare services."
+                title: t('about.values.excellence.title'),
+                description: t('about.values.excellence.desc')
               },
               {
                 icon: Target,
-                title: "Integrity",
-                description: "We uphold ethical practices and transparency in all our interactions."
+                title: t('about.values.integrity.title'),
+                description: t('about.values.integrity.desc')
               },
               {
                 icon: Eye,
-                title: "Innovation",
-                description: "We continuously improve our services through modern healthcare practices."
+                title: t('about.values.innovation.title'),
+                description: t('about.values.innovation.desc')
               }
             ].map((value, index) => (
               <div 
@@ -121,9 +125,9 @@ const About = () => {
       <section className="py-20 bg-background-alt">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="mb-4">Our Team</h2>
+            <h2 className="mb-4">{t('about.team.title')}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our team consists of highly qualified healthcare professionals dedicated to providing exceptional care.
+              {t('about.team.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -154,6 +158,104 @@ const About = () => {
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose BHSK Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="mb-6">{t('about.why.title')}</h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              {t('about.why.subtitle')}
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Award,
+                title: t('about.why.qualified.title'),
+                description: t('about.why.qualified.desc')
+              },
+              {
+                icon: Heart,
+                title: t('about.why.comprehensive.title'),
+                description: t('about.why.comprehensive.desc')
+              },
+              {
+                icon: Target,
+                title: t('about.why.patient.title'),
+                description: t('about.why.patient.desc')
+              },
+              {
+                icon: Shield,
+                title: t('about.why.quality.title'),
+                description: t('about.why.quality.desc')
+              },
+              {
+                icon: Clock,
+                title: t('about.why.flexible.title'),
+                description: t('about.why.flexible.desc')
+              },
+              {
+                icon: Users,
+                title: t('about.why.trusted.title'),
+                description: t('about.why.trusted.desc')
+              }
+            ].map((item, index) => (
+              <div 
+                key={index}
+                className="bg-background-alt p-8 rounded-2xl shadow-soft hover:shadow-card transition-all animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 shadow-soft">
+                  <item.icon className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience the BHSK Difference */}
+      <section className="py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto text-primary-foreground animate-fade-in">
+            <h2 className="mb-6">{t('about.difference.title')}</h2>
+            <p className="text-xl mb-8 text-primary-foreground/90">
+              {t('about.difference.subtitle')}
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Phone className="w-8 h-8 mx-auto mb-3 text-white" />
+                <p className="font-semibold mb-2">{t('common.phone')}</p>
+                <p className="text-sm">31599965</p>
+                <p className="text-sm">31331146</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Mail className="w-8 h-8 mx-auto mb-3 text-white" />
+                <p className="font-semibold mb-2">{t('common.email')}</p>
+                <p className="text-sm">bhsknursingservices@gmail.com</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <MapPin className="w-8 h-8 mx-auto mb-3 text-white" />
+                <p className="font-semibold mb-2">{t('common.address')}</p>
+                <p className="text-sm">Industrial Area, Ar-Rayyan, Qatar</p>
+                <p className="text-sm">Building No 164, Zone 81, Street 29</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="secondary" size="lg" asChild>
+                <a href="tel:0097431599965">Call Us Now</a>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+                <a href="mailto:bhsknursingservices@gmail.com">Send Email</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

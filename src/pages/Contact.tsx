@@ -6,9 +6,11 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t, isRTL } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,39 +36,39 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
-      details: ["0097431599965", "0097431331146"],
+      title: t('common.phone'),
+      details: ["31599965", "31331146"],
       action: "tel:0097431599965",
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t('common.email'),
       details: ["bhsknursingservices@gmail.com"],
       action: "mailto:bhsknursingservices@gmail.com",
     },
     {
       icon: MapPin,
-      title: "Location",
-      details: ["Doha, Qatar"],
-      action: null,
+      title: t('common.location'),
+      details: ["Industrial Area, Ar-Rayyan, Qatar", "Building No 164, Zone 81, Street 29"],
+      action: "https://www.google.com/maps/place/25%C2%B009'57.3%22N+51%C2%B024'17.4%22E/@25.1550538,51.3028901,11.96z/data=!4m4!3m3!8m2!3d25.1659088!4d51.4048347?hl=en&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       icon: Clock,
-      title: "Hours",
+      title: t('common.hours'),
       details: ["24/7 Service Available", "Office: 8 AM - 6 PM"],
       action: null,
     },
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl text-primary-foreground animate-fade-in">
-            <h1 className="mb-6">Contact Us</h1>
+            <h1 className="mb-6">{t('contact.hero.title')}</h1>
             <p className="text-xl text-primary-foreground/90">
-              Get in touch with our team. We're here to answer your questions and discuss your healthcare needs.
+              {t('contact.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -111,13 +113,13 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="animate-fade-in">
-              <h2 className="mb-6">Send Us a Message</h2>
+              <h2 className="mb-6">{t('contact.form.title')}</h2>
               <p className="text-muted-foreground mb-8">
-                Fill out the form below and our team will respond to your inquiry as soon as possible.
+                {t('contact.form.subtitle')}
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="name">Full Name *</Label>
+                  <Label htmlFor="name">{t('contact.form.name')} *</Label>
                   <Input
                     id="name"
                     name="name"
@@ -125,12 +127,12 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Enter your full name"
+                    placeholder={t('form.name_placeholder')}
                     className="mt-2"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email Address *</Label>
+                  <Label htmlFor="email">{t('contact.form.email')} *</Label>
                   <Input
                     id="email"
                     name="email"
@@ -138,12 +140,12 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="your.email@example.com"
+                    placeholder={t('form.email_placeholder')}
                     className="mt-2"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="phone">Phone Number *</Label>
+                  <Label htmlFor="phone">{t('contact.form.phone')} *</Label>
                   <Input
                     id="phone"
                     name="phone"
@@ -151,12 +153,12 @@ const Contact = () => {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+974 XXXX XXXX"
+                    placeholder={t('form.phone_placeholder')}
                     className="mt-2"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="service">Service Interested In</Label>
+                  <Label htmlFor="service">{t('contact.form.service')}</Label>
                   <select
                     id="service"
                     name="service"
@@ -164,38 +166,38 @@ const Contact = () => {
                     onChange={handleChange as any}
                     className="w-full mt-2 h-11 px-3 rounded-md border border-input bg-background text-foreground"
                   >
-                    <option value="">Select a service</option>
-                    <option value="home-nursing">Home Nursing</option>
-                    <option value="elderly-care">Elderly Care</option>
-                    <option value="physiotherapy">Physiotherapy</option>
-                    <option value="baby-care">Baby Care</option>
-                    <option value="post-surgery">Post-Surgery Care</option>
-                    <option value="other">Other</option>
+                    <option value="">{t('form.select_service')}</option>
+                    <option value="home-nursing">{t('form.home_nursing')}</option>
+                    <option value="elderly-care">{t('form.elderly_care')}</option>
+                    <option value="physiotherapy">{t('form.physiotherapy')}</option>
+                    <option value="baby-care">{t('form.baby_care')}</option>
+                    <option value="post-surgery">{t('form.post_surgery')}</option>
+                    <option value="other">{t('form.other')}</option>
                   </select>
                 </div>
                 <div>
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t('contact.form.message')} *</Label>
                   <Textarea
                     id="message"
                     name="message"
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your needs..."
+                    placeholder={t('form.message_placeholder')}
                     className="mt-2 min-h-[120px]"
                   />
                 </div>
                 <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Send Message
+                  {t('contact.form.submit')}
                 </Button>
               </form>
             </div>
 
             {/* Quick Contact Options */}
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h2 className="mb-6">Quick Contact Options</h2>
+              <h2 className="mb-6">{t('contact.quick.title')}</h2>
               <p className="text-muted-foreground mb-8">
-                Prefer a more direct approach? Choose one of our instant contact methods below.
+                {t('contact.quick.subtitle')}
               </p>
 
               <div className="space-y-4 mb-8">
@@ -207,8 +209,8 @@ const Contact = () => {
                 >
                   <MessageCircle className="w-8 h-8 mr-4" />
                   <div>
-                    <h3 className="font-semibold text-lg">WhatsApp</h3>
-                    <p className="text-sm opacity-90">Chat with us instantly</p>
+                    <h3 className="font-semibold text-lg">{t('contact.whatsapp.title')}</h3>
+                    <p className="text-sm opacity-90">{t('contact.whatsapp.subtitle')}</p>
                   </div>
                 </a>
 
@@ -218,8 +220,8 @@ const Contact = () => {
                 >
                   <Phone className="w-8 h-8 mr-4" />
                   <div>
-                    <h3 className="font-semibold text-lg">Call Us</h3>
-                    <p className="text-sm opacity-90">0097431599965</p>
+                    <h3 className="font-semibold text-lg">{t('contact.call.title')}</h3>
+                    <p className="text-sm opacity-90">31599965</p>
                   </div>
                 </a>
 
@@ -229,23 +231,23 @@ const Contact = () => {
                 >
                   <Mail className="w-8 h-8 mr-4" />
                   <div>
-                    <h3 className="font-semibold text-lg">Email Us</h3>
+                    <h3 className="font-semibold text-lg">{t('contact.email.title')}</h3>
                     <p className="text-sm opacity-90">bhsknursingservices@gmail.com</p>
                   </div>
                 </a>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <div className="bg-muted rounded-xl overflow-hidden shadow-soft h-64">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115406.15745433!2d51.440314!3d25.286106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x1cfa88cf812b4032!2sDoha%2C%20Qatar!5e0!3m2!1sen!2s!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.123456789!2d51.4048333!3d25.1659167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA5JzU3LjMiTiA1McKwMjQnMTcuNCJF!5e0!3m2!1sen!2s!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="BHSK Health Services Location"
+                  title="BHSK Health Services Location - Industrial Area, Ar-Rayyan, Qatar"
                 ></iframe>
               </div>
             </div>
@@ -257,12 +259,12 @@ const Contact = () => {
       <section className="py-12 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto text-primary-foreground animate-fade-in">
-            <h3 className="text-2xl font-bold mb-4">Need Immediate Assistance?</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('contact.emergency.title')}</h3>
             <p className="mb-6 text-primary-foreground/90">
-              For urgent healthcare needs, call our 24/7 emergency hotline
+              {t('contact.emergency.subtitle')}
             </p>
             <Button variant="secondary" size="lg" asChild>
-              <a href="tel:+97412345678">Call Emergency Line</a>
+              <a href="tel:+97412345678">{t('contact.emergency_button')}</a>
             </Button>
           </div>
         </div>

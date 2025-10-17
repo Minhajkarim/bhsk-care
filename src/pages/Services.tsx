@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import elderlyImage from "@/assets/elderly-care.jpg";
 import physioImage from "@/assets/physiotherapy.jpg";
 import nurseImage from "@/assets/nurse-professional.jpg";
@@ -34,11 +35,12 @@ import schoolNurseImage from "@/assets/school-nurse.jpg";
 import travelCareImage from "@/assets/travel-care.jpeg";
 
 const Services = () => {
+  const { t, isRTL } = useLanguage();
   const mainServices = [
     {
       icon: Stethoscope,
-      title: "Home Nursing",
-      description: "Professional nursing care delivered at your home",
+      title: t('service.home_nursing.title'),
+      description: t('service.home_nursing.description'),
       image: nurseImage,
       imageAlt: "Professional nurse providing home care",
       features: [
@@ -51,8 +53,8 @@ const Services = () => {
     },
     {
       icon: Heart,
-      title: "Elder Care",
-      description: "Comprehensive care for senior citizens",
+      title: t('service.elder_care.title'),
+      description: t('service.elder_care.description'),
       image: elderlyImage,
       imageAlt: "Elderly care services",
       features: [
@@ -65,8 +67,8 @@ const Services = () => {
     },
     {
       icon: Baby,
-      title: "Neonatal Care",
-      description: "Specialized care for newborns and infants",
+      title: t('service.neonatal_care.title'),
+      description: t('service.neonatal_care.description'),
       image: neonatalImage,
       imageAlt: "Neonatal care services",
       features: [
@@ -79,8 +81,8 @@ const Services = () => {
     },
     {
       icon: Users,
-      title: "Palliative Care",
-      description: "Comfort and support for serious illnesses",
+      title: t('service.palliative_care.title'),
+      description: t('service.palliative_care.description'),
       image: palliativeCareImage,
       imageAlt: "Palliative care services",
       features: [
@@ -93,8 +95,8 @@ const Services = () => {
     },
     {
       icon: Heart,
-      title: "Pregnancy Care",
-      description: "Comprehensive maternal health support",
+      title: t('service.pregnancy_care.title'),
+      description: t('service.pregnancy_care.description'),
       image: pregnancyImage,
       imageAlt: "Pregnancy care services",
       features: [
@@ -107,8 +109,8 @@ const Services = () => {
     },
     {
       icon: GraduationCap,
-      title: "School Nurse",
-      description: "Healthcare services for educational institutions",
+      title: t('service.school_nurse.title'),
+      description: t('service.school_nurse.description'),
       image: schoolNurseImage,
       imageAlt: "School nursing services",
       features: [
@@ -121,8 +123,8 @@ const Services = () => {
     },
     {
       icon: Building,
-      title: "Industrial Nurse",
-      description: "Workplace health and safety services",
+      title: t('service.industrial_nurse.title'),
+      description: t('service.industrial_nurse.description'),
       image: industrialNursingImage,
       imageAlt: "Industrial nursing services",
       features: [
@@ -135,8 +137,8 @@ const Services = () => {
     },
     {
       icon: Plane,
-      title: "Travel Care",
-      description: "Healthcare support for travelers",
+      title: t('service.travel_care.title'),
+      description: t('service.travel_care.description'),
       image: travelCareImage,
       imageAlt: "Travel care services",
       features: [
@@ -149,8 +151,8 @@ const Services = () => {
     },
     {
       icon: Scissors,
-      title: "Post-Operative Care",
-      description: "Comprehensive recovery support after surgery",
+      title: t('service.post_operative_care.title'),
+      description: t('service.post_operative_care.description'),
       image: postOperativeImage,
       imageAlt: "Post-operative care services",
       features: [
@@ -163,8 +165,8 @@ const Services = () => {
     },
     {
       icon: Activity,
-      title: "Physiotherapy",
-      description: "Expert rehabilitation and physical therapy",
+      title: t('service.physiotherapy.title'),
+      description: t('service.physiotherapy.description'),
       image: physioImage,
       imageAlt: "Physiotherapy services",
       features: [
@@ -177,8 +179,8 @@ const Services = () => {
     },
     {
       icon: Pill,
-      title: "Chronic Disease Management",
-      description: "Ongoing care for chronic conditions",
+      title: t('service.chronic_disease_management.title'),
+      description: t('service.chronic_disease_management.description'),
       image: chronicDiseaseImage,
       imageAlt: "Chronic disease management",
       features: [
@@ -191,8 +193,8 @@ const Services = () => {
     },
     {
       icon: Baby,
-      title: "Baby Care & Babysitting",
-      description: "Professional care for infants and children",
+      title: t('service.baby_care.title'),
+      description: t('service.baby_care.description'),
       image: babyCareImage,
       imageAlt: "Baby care and babysitting services",
       features: [
@@ -206,15 +208,15 @@ const Services = () => {
   ];
 
   const additionalServices = [
-    { icon: Thermometer, title: "Health Monitoring", description: "Regular vital signs and health checks" },
-    { icon: Clock, title: "24/7 Availability", description: "Round-the-clock nursing services" },
-    { icon: Shield, title: "Emergency Care", description: "Immediate response to health emergencies" },
-    { icon: Home, title: "Home Modifications", description: "Safety and accessibility improvements" },
-    { icon: Smile, title: "Mental Health Support", description: "Emotional and psychological care" },
+    { icon: Thermometer, title: t('additional.health_monitoring.title'), description: t('additional.health_monitoring.description') },
+    { icon: Clock, title: t('additional.availability.title'), description: t('additional.availability.description') },
+    { icon: Shield, title: t('additional.emergency_care.title'), description: t('additional.emergency_care.description') },
+    { icon: Home, title: t('additional.home_modifications.title'), description: t('additional.home_modifications.description') },
+    { icon: Smile, title: t('additional.mental_health.title'), description: t('additional.mental_health.description') },
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="relative bg-gradient-hero min-h-[600px] flex items-center overflow-hidden">
         {/* Modern background pattern */}
@@ -236,11 +238,11 @@ const Services = () => {
             </div>
             
             <h1 className="mb-8 font-bold leading-tight text-white">
-              Comprehensive Healthcare Services
+              {t('services.hero.title')}
             </h1>
             
             <p className="text-xl mb-10 text-primary-foreground/90 leading-relaxed max-w-2xl">
-              Comprehensive home healthcare solutions tailored to meet your unique needs and delivered by certified professionals.
+              {t('services.hero.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
@@ -250,7 +252,7 @@ const Services = () => {
                 className="bg-white text-primary hover:bg-white/90 shadow-glow hover:shadow-glow hover:animate-pulse-glow transition-all duration-300 px-8 py-4 text-lg font-semibold" 
                 asChild
               >
-                <Link to="/contact">Book Consultation</Link>
+                <Link to="/contact">{t('services.hero.cta.primary')}</Link>
               </Button>
               <Button 
                 variant="outline" 
@@ -258,7 +260,7 @@ const Services = () => {
                 className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary backdrop-blur-sm px-8 py-4 text-lg font-semibold transition-all duration-300" 
                 asChild
               >
-                <a href="tel:0097431599965">Call Us: 0097431599965</a>
+                <a href="tel:0097431599965">{t('services.hero.cta.secondary')}</a>
               </Button>
             </div>
           </div>
@@ -269,9 +271,9 @@ const Services = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="mb-4">Our Healthcare Services</h2>
+            <h2 className="mb-4">{t('services.main.title')}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive healthcare services designed to support your health and wellbeing across all life stages and situations.
+              {t('services.main.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -296,27 +298,27 @@ const Services = () => {
               />
             </div>
             <div className="order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h2 className="mb-6">Specialized Elderly Care</h2>
+              <h2 className="mb-6">{t('services.highlights.elderly.title')}</h2>
               <p className="text-muted-foreground mb-4">
-                Our elderly care services are designed to help seniors maintain their independence and quality of life while receiving the support they need. Our compassionate caregivers provide assistance with daily activities, companionship, and specialized medical care.
+                {t('services.highlights.elderly.content1')}
               </p>
               <p className="text-muted-foreground mb-6">
-                We understand that every senior has unique needs, which is why we create personalized care plans that address physical, emotional, and social wellbeing.
+                {t('services.highlights.elderly.content2')}
               </p>
               <Button variant="default" asChild>
-                <Link to="/contact">Learn More</Link>
+                <Link to="/contact">{t('common.learn_more')}</Link>
               </Button>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="mb-6">Professional Physiotherapy</h2>
+              <h2 className="mb-6">{t('services.highlights.physio.title')}</h2>
               <p className="text-muted-foreground mb-4">
-                Our physiotherapy services bring expert rehabilitation care directly to your home. Whether you're recovering from surgery, an injury, or managing a chronic condition, our licensed physiotherapists develop customized treatment plans to help you regain strength and mobility.
+                {t('services.highlights.physio.content1')}
               </p>
               <p className="text-muted-foreground mb-6">
-                We use evidence-based techniques and modern equipment to ensure effective treatment and faster recovery times.
+                {t('services.highlights.physio.content2')}
               </p>
               <Button variant="default" asChild>
                 <Link to="/contact">Schedule Session</Link>
@@ -337,9 +339,9 @@ const Services = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="mb-4">Additional Services</h2>
+            <h2 className="mb-4">{t('services.additional.title')}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Complementary services to support your overall health and wellness.
+              {t('services.additional.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -364,16 +366,16 @@ const Services = () => {
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto text-primary-foreground animate-fade-in">
-            <h2 className="mb-6">Ready to Experience Quality Healthcare at Home?</h2>
+            <h2 className="mb-6">{t('services.cta.title')}</h2>
             <p className="text-xl mb-8 text-primary-foreground/90">
-              Contact us today to discuss your specific needs and schedule a consultation with our healthcare team.
+              {t('services.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="secondary" size="lg" asChild>
                 <Link to="/contact">Book Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:0097431599965">Call Us: 0097431599965</a>
+                <a href="tel:0097431599965">Call Us: 31599965</a>
               </Button>
             </div>
           </div>

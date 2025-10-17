@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import { Heart, Users, Stethoscope, Baby, Activity, Phone, GraduationCap, Building, Plane, Scissors } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Heart, Users, Stethoscope, Baby, Activity, Phone, GraduationCap, Building, Plane, Scissors, Award, Target, Shield, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import nurseImage from "@/assets/nurse-professional.jpg";
 import elderlyImage from "@/assets/elderly-care.jpg";
@@ -14,67 +15,68 @@ import travelCareImage from "@/assets/travel-care.jpeg";
 import postOperativeImage from "@/assets/post-operative-care.jpg";
 
 const Home = () => {
+  const { t, isRTL } = useLanguage();
   const services = [
     {
       icon: Stethoscope,
-      title: "Home Nursing",
-      description: "Professional nursing care in the comfort of your home",
+      title: t('service.home_nursing.title'),
+      description: t('service.home_nursing.description'),
       image: nurseImage,
       imageAlt: "Professional nurse providing home care",
       features: ["Certified nurses", "24/7 availability", "Medication management", "Wound care"],
     },
     {
       icon: Heart,
-      title: "Elder Care",
-      description: "Comprehensive care for senior citizens",
+      title: t('service.elder_care.title'),
+      description: t('service.elder_care.description'),
       image: elderlyImage,
       imageAlt: "Elderly care services",
       features: ["Personal care assistance", "Companionship", "Mobility support", "Nutrition monitoring"],
     },
     {
       icon: Baby,
-      title: "Neonatal Care",
-      description: "Specialized care for newborns and infants",
+      title: t('service.neonatal_care.title'),
+      description: t('service.neonatal_care.description'),
       image: neonatalImage,
       imageAlt: "Neonatal care services",
       features: ["Newborn monitoring", "Feeding support", "Parent education", "Developmental assessments"],
     },
     {
       icon: Users,
-      title: "Palliative Care",
-      description: "Comfort and support for serious illnesses",
+      title: t('service.palliative_care.title'),
+      description: t('service.palliative_care.description'),
       image: palliativeCareImage,
       imageAlt: "Palliative care services",
       features: ["Pain management", "Emotional support", "Family counseling", "Quality of life"],
     },
     {
       icon: GraduationCap,
-      title: "School Nurse",
-      description: "Healthcare services for educational institutions",
+      title: t('service.school_nurse.title'),
+      description: t('service.school_nurse.description'),
       image: schoolNurseImage,
       imageAlt: "School nursing services",
       features: ["Student health assessments", "Emergency first aid", "Health education", "Immunization"],
     },
     {
       icon: Building,
-      title: "Industrial Nurse",
-      description: "Workplace health and safety services",
+      title: t('service.industrial_nurse.title'),
+      description: t('service.industrial_nurse.description'),
       image: industrialNursingImage,
       imageAlt: "Industrial nursing services",
       features: ["Occupational health", "Injury management", "Safety training", "Wellness programs"],
     },
     {
       icon: Plane,
-      title: "Travel Care",
-      description: "Healthcare support for travelers",
+      title: t('service.travel_care.title'),
+      description: t('service.travel_care.description'),
       image: travelCareImage,
       imageAlt: "Travel care services",
       features: ["Pre-travel consultations", "Vaccination services", "Medical escort", "Emergency support"],
     },
     {
       icon: Scissors,
-      title: "Post-Operative Care",
-      description: "Comprehensive recovery support after surgery",
+      title: t('service.post_operative_care.title'),
+      description: t('service.post_operative_care.description'),
       image: postOperativeImage,
       imageAlt: "Post-operative care services",
       features: ["Wound care", "Pain management", "Mobility assistance", "Follow-up coordination"],
@@ -103,7 +105,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="relative bg-gradient-hero min-h-[700px] flex items-center overflow-hidden">
         {/* Modern background pattern */}
@@ -125,15 +127,11 @@ const Home = () => {
             </div>
             
             <h1 className="mb-8 font-bold leading-tight text-white">
-              Comprehensive Healthcare Services & 
-              <span className="block text-white/90">
-                Professional Medical Care in Qatar
-              </span>
+              {t('home.hero.title')}
             </h1>
             
             <p className="text-xl mb-10 text-primary-foreground/90 leading-relaxed max-w-2xl">
-              Caring Hands, Healing Hearts. Expert healthcare services delivered with compassion, 
-              professionalism, and cutting-edge medical expertise right at your doorstep.
+              {t('home.hero.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
@@ -143,7 +141,7 @@ const Home = () => {
                 className="bg-white text-primary hover:bg-white/90 shadow-glow hover:shadow-glow hover:animate-pulse-glow transition-all duration-300 px-8 py-4 text-lg font-semibold" 
                 asChild
               >
-                <Link to="/contact">Book a Nurse Now</Link>
+                <Link to="/contact">{t('home.hero.cta.primary')}</Link>
               </Button>
               <Button 
                 variant="outline" 
@@ -151,7 +149,7 @@ const Home = () => {
                 className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary backdrop-blur-sm px-8 py-4 text-lg font-semibold transition-all duration-300" 
                 asChild
               >
-                <Link to="/services">View All Services</Link>
+                <a href="tel:0097431599965">{t('home.hero.cta.secondary')}</a>
               </Button>
             </div>
             
@@ -225,34 +223,58 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="py-20 bg-background-alt">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="mb-4">Why Choose BHSK Health Services?</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We are committed to providing the highest quality healthcare services with compassion and professionalism.
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="mb-6">{t('about.why.title')}</h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              {t('about.why.subtitle')}
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 animate-fade-in">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-soft">
-                <Users className="w-8 h-8 text-primary-foreground" />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Award,
+                title: t('about.why.qualified.title'),
+                description: t('about.why.qualified.desc')
+              },
+              {
+                icon: Heart,
+                title: t('about.why.comprehensive.title'),
+                description: t('about.why.comprehensive.desc')
+              },
+              {
+                icon: Target,
+                title: t('about.why.patient.title'),
+                description: t('about.why.patient.desc')
+              },
+              {
+                icon: Shield,
+                title: t('about.why.quality.title'),
+                description: t('about.why.quality.desc')
+              },
+              {
+                icon: Clock,
+                title: t('about.why.flexible.title'),
+                description: t('about.why.flexible.desc')
+              },
+              {
+                icon: Users,
+                title: t('about.why.trusted.title'),
+                description: t('about.why.trusted.desc')
+              }
+            ].map((item, index) => (
+              <div 
+                key={index}
+                className="text-center p-6 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-soft">
+                  <item.icon className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Certified Professionals</h3>
-              <p className="text-muted-foreground">All our nurses and caregivers are certified and extensively trained in their specialties.</p>
-            </div>
-            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-soft">
-                <Heart className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Compassionate Care</h3>
-              <p className="text-muted-foreground">We treat every patient with dignity, respect, and the utmost care and compassion.</p>
-            </div>
-            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-soft">
-                <Phone className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">24/7 Support</h3>
-              <p className="text-muted-foreground">Our team is available round the clock to address your healthcare needs and concerns.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
