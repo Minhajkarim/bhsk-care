@@ -43,6 +43,7 @@ const Services = () => {
       description: t('service.home_nursing.description'),
       image: nurseImage,
       imageAlt: "Professional nurse providing home care",
+      serviceKey: 'service.home_nursing',
       features: [
         "Medication administration and management",
         "Vital signs monitoring",
@@ -57,6 +58,7 @@ const Services = () => {
       description: t('service.elder_care.description'),
       image: elderlyImage,
       imageAlt: "Elderly care services",
+      serviceKey: 'service.elder_care',
       features: [
         "Personal hygiene assistance",
         "Mobility and transfer support",
@@ -71,6 +73,7 @@ const Services = () => {
       description: t('service.neonatal_care.description'),
       image: neonatalImage,
       imageAlt: "Neonatal care services",
+      serviceKey: 'service.neonatal_care',
       features: [
         "Newborn health monitoring",
         "Feeding support and guidance",
@@ -85,6 +88,7 @@ const Services = () => {
       description: t('service.palliative_care.description'),
       image: palliativeCareImage,
       imageAlt: "Palliative care services",
+      serviceKey: 'service.palliative_care',
       features: [
         "Pain and symptom management",
         "Emotional and spiritual support",
@@ -99,6 +103,7 @@ const Services = () => {
       description: t('service.pregnancy_care.description'),
       image: pregnancyImage,
       imageAlt: "Pregnancy care services",
+      serviceKey: 'service.pregnancy_care',
       features: [
         "Prenatal health monitoring",
         "Postpartum care and recovery",
@@ -113,6 +118,7 @@ const Services = () => {
       description: t('service.school_nurse.description'),
       image: schoolNurseImage,
       imageAlt: "School nursing services",
+      serviceKey: 'service.school_nurse',
       features: [
         "Student health assessments",
         "Emergency first aid",
@@ -127,6 +133,7 @@ const Services = () => {
       description: t('service.industrial_nurse.description'),
       image: industrialNursingImage,
       imageAlt: "Industrial nursing services",
+      serviceKey: 'service.industrial_nurse',
       features: [
         "Occupational health assessments",
         "Workplace injury management",
@@ -141,6 +148,7 @@ const Services = () => {
       description: t('service.travel_care.description'),
       image: travelCareImage,
       imageAlt: "Travel care services",
+      serviceKey: 'service.travel_care',
       features: [
         "Pre-travel health consultations",
         "Travel vaccination services",
@@ -155,6 +163,7 @@ const Services = () => {
       description: t('service.post_operative_care.description'),
       image: postOperativeImage,
       imageAlt: "Post-operative care services",
+      serviceKey: 'service.post_operative_care',
       features: [
         "Wound care and monitoring",
         "Pain management",
@@ -169,6 +178,7 @@ const Services = () => {
       description: t('service.physiotherapy.description'),
       image: physioImage,
       imageAlt: "Physiotherapy services",
+      serviceKey: 'service.physiotherapy',
       features: [
         "Post-surgery rehabilitation",
         "Stroke recovery programs",
@@ -183,6 +193,7 @@ const Services = () => {
       description: t('service.chronic_disease_management.description'),
       image: chronicDiseaseImage,
       imageAlt: "Chronic disease management",
+      serviceKey: 'service.chronic_disease_management',
       features: [
         "Diabetes care and monitoring",
         "Hypertension management",
@@ -197,6 +208,7 @@ const Services = () => {
       description: t('service.baby_care.description'),
       image: babyCareImage,
       imageAlt: "Baby care and babysitting services",
+      serviceKey: 'service.baby_care',
       features: [
         "Infant care and support",
         "Feeding and nutrition guidance",

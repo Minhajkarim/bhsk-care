@@ -181,6 +181,75 @@ const translations = {
     'home.hero.cta.primary': 'Book Consultation',
     'home.hero.cta.secondary': 'Call Us: 31599965',
     
+    // Service Details
+    'service.home_nursing.details': 'Our home nursing services provide comprehensive medical care in the comfort of your own home. Our certified nurses are trained to handle various medical conditions and provide personalized care.',
+    'service.home_nursing.duration': 'Available 24/7, hourly, 12-hour, or 24-hour shifts',
+    'service.home_nursing.requirements': 'Medical prescription or doctor referral recommended',
+    'service.home_nursing.pricing': 'Starting from QAR 150/hour',
+    
+    'service.elder_care.details': 'Specialized care for senior citizens focusing on maintaining independence while ensuring safety and comfort. Our caregivers are trained in elderly-specific care techniques.',
+    'service.elder_care.duration': 'Flexible scheduling from hourly to 24-hour care',
+    'service.elder_care.requirements': 'Health assessment and care plan development',
+    'service.elder_care.pricing': 'Starting from QAR 120/hour',
+    
+    'service.neonatal_care.details': 'Expert care for newborns and infants with specialized training in neonatal care. Our nurses provide support for premature babies and newborns with special needs.',
+    'service.neonatal_care.duration': '24/7 availability for critical cases',
+    'service.neonatal_care.requirements': 'Pediatrician consultation and medical records',
+    'service.neonatal_care.pricing': 'Starting from QAR 200/hour',
+    
+    'service.palliative_care.details': 'Compassionate end-of-life care focusing on comfort, dignity, and quality of life. Our team provides emotional support for both patients and families.',
+    'service.palliative_care.duration': 'Continuous care as needed',
+    'service.palliative_care.requirements': 'Medical diagnosis and family consultation',
+    'service.palliative_care.pricing': 'Starting from QAR 180/hour',
+    
+    'service.pregnancy_care.details': 'Comprehensive maternal health support from prenatal to postpartum care. Our nurses specialize in pregnancy-related health monitoring and newborn care education.',
+    'service.pregnancy_care.duration': 'Flexible scheduling throughout pregnancy and postpartum',
+    'service.pregnancy_care.requirements': 'Prenatal medical records and doctor clearance',
+    'service.pregnancy_care.pricing': 'Starting from QAR 160/hour',
+    
+    'service.school_nurse.details': 'Professional healthcare services for educational institutions including student health assessments, emergency response, and health education programs.',
+    'service.school_nurse.duration': 'School hours or full-time contracts',
+    'service.school_nurse.requirements': 'Educational institution partnership agreement',
+    'service.school_nurse.pricing': 'Contract-based pricing available',
+    
+    'service.industrial_nurse.details': 'Workplace health and safety services including occupational health assessments, injury management, and employee wellness programs.',
+    'service.industrial_nurse.duration': 'Business hours or shift-based contracts',
+    'service.industrial_nurse.requirements': 'Company partnership and safety protocols',
+    'service.industrial_nurse.pricing': 'Corporate contract rates available',
+    
+    'service.travel_care.details': 'Healthcare support for travelers including pre-travel consultations, medical escort services, and emergency medical support abroad.',
+    'service.travel_care.duration': 'As needed for travel duration',
+    'service.travel_care.requirements': 'Travel itinerary and medical history',
+    'service.travel_care.pricing': 'Starting from QAR 300/day',
+    
+    'service.post_operative_care.details': 'Comprehensive recovery support after surgery including wound care, pain management, medication administration, and mobility assistance.',
+    'service.post_operative_care.duration': '1-4 weeks post-surgery',
+    'service.post_operative_care.requirements': 'Surgical discharge summary and care plan',
+    'service.post_operative_care.pricing': 'Starting from QAR 170/hour',
+    
+    'service.physiotherapy.details': 'Expert rehabilitation and physical therapy services delivered at home using evidence-based techniques and modern equipment.',
+    'service.physiotherapy.duration': '45-60 minute sessions, 2-3 times per week',
+    'service.physiotherapy.requirements': 'Physician referral and assessment',
+    'service.physiotherapy.pricing': 'Starting from QAR 250/session',
+    
+    'service.chronic_disease_management.details': 'Ongoing care for chronic conditions including diabetes, hypertension, heart disease, and COPD with regular monitoring and management.',
+    'service.chronic_disease_management.duration': 'Long-term ongoing care',
+    'service.chronic_disease_management.requirements': 'Medical diagnosis and treatment plan',
+    'service.chronic_disease_management.pricing': 'Starting from QAR 140/hour',
+    
+    'service.baby_care.details': 'Professional care for infants and children including feeding support, sleep training, development monitoring, and safe engaging activities.',
+    'service.baby_care.duration': 'Flexible scheduling from hourly to daily care',
+    'service.baby_care.requirements': 'Child\'s medical records and care preferences',
+    'service.baby_care.pricing': 'Starting from QAR 100/hour',
+    
+    // Common service details
+    'service.details': 'Service Details',
+    'service.duration': 'Duration',
+    'service.requirements': 'Requirements',
+    'service.pricing': 'Pricing',
+    'service.book_now': 'Book Now',
+    'service.learn_more': 'Learn More',
+    
     // Contact page
     'contact.hero.title': 'Contact Us',
     'contact.hero.subtitle': 'Get in touch with our team. We\'re here to answer your questions and discuss your healthcare needs.',
@@ -382,6 +451,75 @@ const translations = {
     'home.hero.subtitle': 'حلول رعاية صحية شاملة مصممة خصيصاً لتلبية احتياجاتك الفريدة وتقدمها متخصصون معتمدون.',
     'home.hero.cta.primary': 'احجز استشارة',
     'home.hero.cta.secondary': 'اتصل بنا: 31599965',
+    
+    // Service Details
+    'service.home_nursing.details': 'خدمات التمريض المنزلي لدينا توفر رعاية طبية شاملة في راحة منزلك. ممرضاتنا المعتمدات مدربات على التعامل مع حالات طبية مختلفة وتقديم رعاية شخصية.',
+    'service.home_nursing.duration': 'متاح 24/7، بالساعة، 12 ساعة، أو نوبات 24 ساعة',
+    'service.home_nursing.requirements': 'وصفة طبية أو إحالة طبيب موصى بها',
+    'service.home_nursing.pricing': 'بدءاً من 150 ريال قطري/ساعة',
+    
+    'service.elder_care.details': 'رعاية متخصصة للمواطنين كبار السن تركز على الحفاظ على الاستقلالية مع ضمان السلامة والراحة. مقدمي الرعاية لدينا مدربون على تقنيات الرعاية الخاصة بكبار السن.',
+    'service.elder_care.duration': 'جدولة مرنة من الساعة إلى رعاية 24 ساعة',
+    'service.elder_care.requirements': 'تقييم صحي وتطوير خطة رعاية',
+    'service.elder_care.pricing': 'بدءاً من 120 ريال قطري/ساعة',
+    
+    'service.neonatal_care.details': 'رعاية متخصصة للمواليد الجدد والرضع مع تدريب متخصص في الرعاية الوليدية. ممرضاتنا تقدم الدعم للأطفال الخدج والمواليد ذوي الاحتياجات الخاصة.',
+    'service.neonatal_care.duration': 'متاح 24/7 للحالات الحرجة',
+    'service.neonatal_care.requirements': 'استشارة طبيب أطفال والسجلات الطبية',
+    'service.neonatal_care.pricing': 'بدءاً من 200 ريال قطري/ساعة',
+    
+    'service.palliative_care.details': 'رعاية متعاطفة في نهاية العمر تركز على الراحة والكرامة وجودة الحياة. فريقنا يقدم الدعم العاطفي للمرضى والعائلات.',
+    'service.palliative_care.duration': 'رعاية مستمرة حسب الحاجة',
+    'service.palliative_care.requirements': 'تشخيص طبي واستشارة عائلية',
+    'service.palliative_care.pricing': 'بدءاً من 180 ريال قطري/ساعة',
+    
+    'service.pregnancy_care.details': 'دعم شامل لصحة الأمومة من الرعاية السابقة للولادة إلى ما بعد الولادة. ممرضاتنا متخصصات في مراقبة الصحة المتعلقة بالحمل وتعليم رعاية المواليد الجدد.',
+    'service.pregnancy_care.duration': 'جدولة مرنة طوال فترة الحمل وما بعد الولادة',
+    'service.pregnancy_care.requirements': 'السجلات الطبية السابقة للولادة وموافقة الطبيب',
+    'service.pregnancy_care.pricing': 'بدءاً من 160 ريال قطري/ساعة',
+    
+    'service.school_nurse.details': 'خدمات رعاية صحية مهنية للمؤسسات التعليمية تشمل تقييمات صحة الطلاب والاستجابة للطوارئ وبرامج التثقيف الصحي.',
+    'service.school_nurse.duration': 'ساعات المدرسة أو عقود بدوام كامل',
+    'service.school_nurse.requirements': 'اتفاقية شراكة مع المؤسسة التعليمية',
+    'service.school_nurse.pricing': 'أسعار تعاقدية متاحة',
+    
+    'service.industrial_nurse.details': 'خدمات الصحة والسلامة في مكان العمل تشمل تقييمات الصحة المهنية وإدارة الإصابات وبرامج رفاهية الموظفين.',
+    'service.industrial_nurse.duration': 'ساعات العمل أو عقود قائمة على النوبات',
+    'service.industrial_nurse.requirements': 'شراكة الشركة وبروتوكولات السلامة',
+    'service.industrial_nurse.pricing': 'أسعار عقود الشركات متاحة',
+    
+    'service.travel_care.details': 'دعم الرعاية الصحية للمسافرين يشمل استشارات ما قبل السفر وخدمات المرافقة الطبية والدعم الطبي الطارئ في الخارج.',
+    'service.travel_care.duration': 'حسب الحاجة لمدة السفر',
+    'service.travel_care.requirements': 'خطة السفر والتاريخ الطبي',
+    'service.travel_care.pricing': 'بدءاً من 300 ريال قطري/يوم',
+    
+    'service.post_operative_care.details': 'دعم شامل للتعافي بعد الجراحة يشمل رعاية الجروح وإدارة الألم وإعطاء الأدوية والمساعدة في الحركة.',
+    'service.post_operative_care.duration': '1-4 أسابيع بعد الجراحة',
+    'service.post_operative_care.requirements': 'ملخص الخروج الجراحي وخطة الرعاية',
+    'service.post_operative_care.pricing': 'بدءاً من 170 ريال قطري/ساعة',
+    
+    'service.physiotherapy.details': 'خدمات إعادة التأهيل والعلاج الطبيعي المتخصصة تقدم في المنزل باستخدام تقنيات قائمة على الأدلة ومعدات حديثة.',
+    'service.physiotherapy.duration': 'جلسات 45-60 دقيقة، 2-3 مرات في الأسبوع',
+    'service.physiotherapy.requirements': 'إحالة طبيب وتقييم',
+    'service.physiotherapy.pricing': 'بدءاً من 250 ريال قطري/جلسة',
+    
+    'service.chronic_disease_management.details': 'رعاية مستمرة للحالات المزمنة تشمل السكري وارتفاع ضغط الدم وأمراض القلب ومرض الانسداد الرئوي المزمن مع مراقبة وإدارة منتظمة.',
+    'service.chronic_disease_management.duration': 'رعاية مستمرة طويلة الأجل',
+    'service.chronic_disease_management.requirements': 'تشخيص طبي وخطة علاج',
+    'service.chronic_disease_management.pricing': 'بدءاً من 140 ريال قطري/ساعة',
+    
+    'service.baby_care.details': 'رعاية مهنية للرضع والأطفال تشمل دعم التغذية وتدريب النوم ومراقبة التطور وأنشطة آمنة ومشجعة.',
+    'service.baby_care.duration': 'جدولة مرنة من الساعة إلى الرعاية اليومية',
+    'service.baby_care.requirements': 'السجلات الطبية للطفل وتفضيلات الرعاية',
+    'service.baby_care.pricing': 'بدءاً من 100 ريال قطري/ساعة',
+    
+    // Common service details
+    'service.details': 'تفاصيل الخدمة',
+    'service.duration': 'المدة',
+    'service.requirements': 'المتطلبات',
+    'service.pricing': 'التسعير',
+    'service.book_now': 'احجز الآن',
+    'service.learn_more': 'تعلم المزيد',
     
     // Contact page
     'contact.hero.title': 'اتصل بنا',
