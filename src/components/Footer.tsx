@@ -31,10 +31,10 @@ const Footer = () => {
               {t('footer.description')}
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
+              <a href="https://www.facebook.com/share/1BmFtdtuPj/" target="_blank" rel="noopener noreferrer" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
                 <Facebook className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="#" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
+              <a href="https://www.instagram.com/bhsknursingservices?igsh=bXM5cTZlY2NzemJr" target="_blank" rel="noopener noreferrer" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
                 <Instagram className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a href="#" className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl hover:from-primary/20 hover:to-secondary/20 hover:shadow-glow transition-all duration-300 group">
@@ -110,8 +110,8 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">31599965</p>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">31331146</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">+97431599965</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">+97431331146</p>
                 </div>
               </li>
               <li className="flex items-start group">

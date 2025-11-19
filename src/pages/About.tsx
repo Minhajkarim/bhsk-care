@@ -233,8 +233,8 @@ const About = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <Phone className="w-8 h-8 mx-auto mb-3 text-white" />
                 <p className="font-semibold mb-2">{t('common.phone')}</p>
-                <p className="text-sm">31599965</p>
-                <p className="text-sm">31331146</p>
+                <p className="text-sm">+97431599965</p>
+                <p className="text-sm">+97431331146</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <Mail className="w-8 h-8 mx-auto mb-3 text-white" />
@@ -250,7 +250,7 @@ const About = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="secondary" size="lg" asChild>
-                <a href="tel:0097431599965">Call Us Now</a>
+                <a href="tel:+97431599965">Call Us Now</a>
               </Button>
               <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
                 <a href="mailto:bhsknursingservices@gmail.com">Send Email</a>

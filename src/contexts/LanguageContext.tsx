@@ -33,7 +33,7 @@ const translations = {
     'home.hero.title': 'Professional Healthcare Services in Qatar',
     'home.hero.subtitle': 'Comprehensive healthcare solutions tailored to meet your unique needs and delivered by certified professionals.',
     'home.hero.cta.primary': 'Book Consultation',
-    'home.hero.cta.secondary': 'Call Us: 31599965',
+    'home.hero.cta.secondary': 'Call Us: +97431599965',
     
     // About page
     'about.hero.title': 'About BHSK Health Services',
@@ -79,7 +79,7 @@ const translations = {
     'services.hero.title': 'Comprehensive Healthcare Services',
     'services.hero.subtitle': 'Comprehensive healthcare solutions tailored to meet your unique needs and delivered by certified professionals.',
     'services.hero.cta.primary': 'Book Consultation',
-    'services.hero.cta.secondary': 'Call Us: 31599965',
+    'services.hero.cta.secondary': 'Call Us: +97431599965',
     'services.main.title': 'Our Healthcare Services',
     'services.main.subtitle': 'Comprehensive healthcare services designed to support your health and wellbeing across all life stages and situations.',
     'services.highlights.elderly.title': 'Specialized Elderly Care',
@@ -179,7 +179,7 @@ const translations = {
     'home.hero.title': 'Professional Healthcare Services in Qatar',
     'home.hero.subtitle': 'Comprehensive healthcare solutions tailored to meet your unique needs and delivered by certified professionals.',
     'home.hero.cta.primary': 'Book Consultation',
-    'home.hero.cta.secondary': 'Call Us: 31599965',
+    'home.hero.cta.secondary': 'Call Us: +97431599965',
     
     // Service Details
     'service.home_nursing.details': 'Our home nursing services provide comprehensive medical care in the comfort of your own home. Our certified nurses are trained to handle various medical conditions and provide personalized care.',
@@ -304,7 +304,7 @@ const translations = {
     'home.hero.title': 'خدمات الرعاية الصحية المهنية في قطر',
     'home.hero.subtitle': 'حلول رعاية صحية شاملة مصممة خصيصاً لتلبية احتياجاتك الفريدة وتقدمها متخصصون معتمدون.',
     'home.hero.cta.primary': 'احجز استشارة',
-    'home.hero.cta.secondary': 'اتصل بنا: 31599965',
+    'home.hero.cta.secondary': 'اتصل بنا: +97431599965',
     
     // About page
     'about.hero.title': 'حول خدمات بيسك للرعاية الصحية',
@@ -350,7 +350,7 @@ const translations = {
     'services.hero.title': 'خدمات الرعاية الصحية الشاملة',
     'services.hero.subtitle': 'حلول رعاية صحية شاملة مصممة خصيصاً لتلبية احتياجاتك الفريدة وتقدمها متخصصون معتمدون.',
     'services.hero.cta.primary': 'احجز استشارة',
-    'services.hero.cta.secondary': 'اتصل بنا: 31599965',
+    'services.hero.cta.secondary': 'اتصل بنا: +97431599965',
     'services.main.title': 'خدماتنا الصحية',
     'services.main.subtitle': 'خدمات رعاية صحية شاملة مصممة لدعم صحتك ورفاهيتك في جميع مراحل الحياة والمواقف.',
     'services.highlights.elderly.title': 'رعاية متخصصة للمسنين',
@@ -450,7 +450,7 @@ const translations = {
     'home.hero.title': 'خدمات الرعاية الصحية المهنية في قطر',
     'home.hero.subtitle': 'حلول رعاية صحية شاملة مصممة خصيصاً لتلبية احتياجاتك الفريدة وتقدمها متخصصون معتمدون.',
     'home.hero.cta.primary': 'احجز استشارة',
-    'home.hero.cta.secondary': 'اتصل بنا: 31599965',
+    'home.hero.cta.secondary': 'اتصل بنا: +97431599965',
     
     // Service Details
     'service.home_nursing.details': 'خدمات التمريض المنزلي لدينا توفر رعاية طبية شاملة في راحة منزلك. ممرضاتنا المعتمدات مدربات على التعامل مع حالات طبية مختلفة وتقديم رعاية شخصية.',

@@ -37,8 +37,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: t('common.phone'),
-      details: ["31599965", "31331146"],
-      action: "tel:0097431599965",
+      details: ["+97431599965", "+97431331146"],
+      action: "tel:+97431599965",
     },
     {
       icon: Mail,
@@ -215,13 +215,13 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="tel:0097431599965"
+                  href="tel:+97431599965"
                   className="flex items-center p-6 bg-primary text-primary-foreground rounded-xl hover:shadow-card transition-all"
                 >
                   <Phone className="w-8 h-8 mr-4" />
                   <div>
                     <h3 className="font-semibold text-lg">{t('contact.call.title')}</h3>
-                    <p className="text-sm opacity-90">31599965</p>
+                    <p className="text-sm opacity-90">+97431599965</p>
                   </div>
                 </a>
 
@@ -264,7 +264,7 @@ const Contact = () => {
               {t('contact.emergency.subtitle')}
             </p>
             <Button variant="secondary" size="lg" asChild>
-              <a href="tel:+97412345678">{t('contact.emergency_button')}</a>
+              <a href="tel:+97431599965">{t('contact.emergency_button')}</a>
             </Button>
           </div>
         </div>

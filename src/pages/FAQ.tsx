@@ -85,7 +85,7 @@ const FAQ = () => {
                 <Link to="/contact">{t('common.contact_us')}</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:0097431599965">{t('common.call_us')} 31599965</a>
+                <a href="tel:+97431599965">{t('common.call_us')} +97431599965</a>
               </Button>
             </div>
           </div>

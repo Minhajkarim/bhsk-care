@@ -272,7 +272,7 @@ const Services = () => {
                 className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary backdrop-blur-sm px-8 py-4 text-lg font-semibold transition-all duration-300" 
                 asChild
               >
-                <a href="tel:0097431599965">{t('services.hero.cta.secondary')}</a>
+                <a href="tel:+97431599965">{t('services.hero.cta.secondary')}</a>
               </Button>
             </div>
           </div>
@@ -387,7 +387,7 @@ const Services = () => {
                 <Link to="/contact">Book Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:0097431599965">Call Us: 31599965</a>
+                <a href="tel:+97431599965">Call Us: +97431599965</a>
               </Button>
             </div>
           </div>
