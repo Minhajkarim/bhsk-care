@@ -50,7 +50,7 @@ const Contact = () => {
       icon: MapPin,
       title: t('common.location'),
       details: ["Industrial Area, Ar-Rayyan, Qatar", "Building No 164, Zone 81, Street 29"],
-      action: "https://www.google.com/maps/place/25%C2%B009'57.3%22N+51%C2%B024'17.4%22E/@25.1550538,51.3028901,11.96z/data=!4m4!3m3!8m2!3d25.1659088!4d51.4048347?hl=en&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      action: "https://www.google.com/maps/place/BHSK+Health+Services/@25.1664364,51.405356,17z/data=!3m1!4b1!4m6!3m5!1s0x3e45d74cb6279af3:0x6aaf4effdcae0c20!8m2!3d25.1664364!4d51.405356!16s%2Fg%2F11y83jdh5p?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       icon: Clock,
@@ -240,7 +240,8 @@ const Contact = () => {
               {/* Map */}
               <div className="bg-muted rounded-xl overflow-hidden shadow-soft h-64">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.123456789!2d51.4048333!3d25.1659167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA5JzU3LjMiTiA1McKwMjQnMTcuNCJF!5e0!3m2!1sen!2s!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.661910347418!2d51.405356!3d25.1664364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45d74cb6279af3%3A0x6aaf4effdcae0c20!2sBHSK%20Health%20Services!5e0!3m2!1sen!2sqa!4v1737247390000!5m2!1sen!2sqa
+"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
