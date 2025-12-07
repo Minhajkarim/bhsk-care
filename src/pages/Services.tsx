@@ -1,4 +1,5 @@
 import ServiceCard from "@/components/ServiceCard";
+import SEO from "@/components/SEO";
 import { 
   Stethoscope, 
   Heart, 
@@ -36,6 +37,61 @@ import travelCareImage from "@/assets/travel-care.jpeg";
 
 const Services = () => {
   const { t, isRTL } = useLanguage();
+  const baseUrl = 'https://www.bhskforhealthservices.com';
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Healthcare Services",
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "BHSK Health Services",
+      "telephone": "+97431599965",
+      "email": "bhsknursingservices@gmail.com"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Qatar"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Healthcare Services in Qatar",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Home Nursing Services",
+            "description": "Professional home nursing services in Qatar"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Elderly Care Services",
+            "description": "Comprehensive elderly care services in Qatar"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Physiotherapy Services",
+            "description": "Professional physiotherapy services in Qatar"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Neonatal Care Services",
+            "description": "Specialized neonatal care services in Qatar"
+          }
+        }
+      ]
+    }
+  };
   const mainServices = [
     {
       icon: Stethoscope,
@@ -228,7 +284,21 @@ const Services = () => {
   ];
 
   return (
-    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
+    <>
+      <SEO
+        title="Healthcare Services in Qatar - Home Nursing, Elderly Care, Physiotherapy & More | BHSK"
+        description="Comprehensive healthcare services in Qatar including home nursing, elderly care, neonatal care, palliative care, pregnancy care, school nursing, industrial nursing, travel care, post-operative care, and physiotherapy. 24/7 available certified professionals."
+        keywords="healthcare services Qatar, home nursing services Qatar, elderly care services Qatar, physiotherapy Qatar, neonatal care Qatar, palliative care services Qatar, pregnancy care Qatar, school nurse services Qatar, industrial nurse Qatar, travel care services Qatar, post-operative care Qatar, baby care Qatar, chronic disease management Qatar"
+        image="/nurse-professional.jpg"
+        url={`${baseUrl}/services`}
+        canonical={`${baseUrl}/services`}
+        alternateLang={[
+          { lang: "en", url: `${baseUrl}/services` },
+          { lang: "ar", url: `${baseUrl}/ar/services` }
+        ]}
+        structuredData={structuredData}
+      />
+      <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="relative bg-gradient-hero min-h-[600px] flex items-center overflow-hidden">
         {/* Modern background pattern */}
@@ -394,6 +464,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

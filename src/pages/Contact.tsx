@@ -6,11 +6,37 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
   const { t, isRTL } = useLanguage();
+  const baseUrl = 'https://www.bhskforhealthservices.com';
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "MedicalBusiness",
+      "name": "BHSK Health Services",
+      "telephone": "+97431599965",
+      "email": "bhsknursingservices@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Building No 164, Zone 81, Street 29",
+        "addressLocality": "Industrial Area, Ar-Rayyan",
+        "addressRegion": "Qatar",
+        "addressCountry": "QA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.1659167",
+        "longitude": "51.4048333"
+      },
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,7 +87,21 @@ const Contact = () => {
   ];
 
   return (
-    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
+    <>
+      <SEO
+        title="Contact BHSK Health Services - Get in Touch | Qatar Healthcare Services"
+        description="Contact BHSK Health Services in Qatar. Call us at +97431599965 or email bhsknursingservices@gmail.com. Located in Industrial Area, Ar-Rayyan. 24/7 available for all your healthcare needs."
+        keywords="contact BHSK Health Services, healthcare contact Qatar, medical services contact Qatar, nursing services contact Qatar, BHSK phone number, healthcare Qatar phone, medical care Qatar contact"
+        image="/hero-image.jpg"
+        url={`${baseUrl}/contact`}
+        canonical={`${baseUrl}/contact`}
+        alternateLang={[
+          { lang: "en", url: `${baseUrl}/contact` },
+          { lang: "ar", url: `${baseUrl}/ar/contact` }
+        ]}
+        structuredData={structuredData}
+      />
+      <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
@@ -271,6 +311,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

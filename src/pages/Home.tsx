@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import SEO from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Heart, Users, Stethoscope, Baby, Activity, Phone, GraduationCap, Building, Plane, Scissors, Award, Target, Shield, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
@@ -16,6 +17,81 @@ import postOperativeImage from "@/assets/post-operative-care.jpg";
 
 const Home = () => {
   const { t, isRTL } = useLanguage();
+  
+  const baseUrl = 'https://www.bhskforhealthservices.com';
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "BHSK Health Services",
+    "description": "Comprehensive healthcare services including home nursing, elderly care, neonatal care, palliative care, pregnancy care, school nursing, industrial nursing, travel care, and post-operative care in Qatar.",
+    "url": baseUrl,
+    "logo": `${baseUrl}/logo.png`,
+    "image": `${baseUrl}/hero-image.jpg`,
+    "telephone": "+97431599965",
+    "email": "bhsknursingservices@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Building No 164, Zone 81, Street 29",
+      "addressLocality": "Industrial Area, Ar-Rayyan",
+      "addressRegion": "Qatar",
+      "addressCountry": "QA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.1659167",
+      "longitude": "51.4048333"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Qatar"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Healthcare Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Home Nursing",
+            "description": "Professional home nursing services in Qatar"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Elderly Care",
+            "description": "Comprehensive elderly care services in Qatar"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Neonatal Care",
+            "description": "Specialized neonatal care services in Qatar"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Physiotherapy",
+            "description": "Professional physiotherapy services in Qatar"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "500"
+    }
+  };
   const services = [
     {
       icon: Stethoscope,
@@ -105,7 +181,21 @@ const Home = () => {
   ];
 
   return (
-    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
+    <>
+      <SEO
+        title="BHSK Health Services - Professional Healthcare & Medical Care in Qatar | Home Nursing, Elderly Care, Physiotherapy"
+        description="BHSK Health Services provides comprehensive healthcare services in Qatar including home nursing, elderly care, neonatal care, palliative care, pregnancy care, school nursing, industrial nursing, travel care, and post-operative care. 24/7 available certified professionals."
+        keywords="home nursing Qatar, elderly care Qatar, healthcare services Qatar, medical care Doha, nursing services Qatar, physiotherapy Qatar, neonatal care Qatar, palliative care Qatar, pregnancy care Qatar, school nurse Qatar, industrial nurse Qatar, travel care Qatar, post-operative care Qatar, certified nurses Qatar, 24/7 healthcare Qatar"
+        image="/hero-image.jpg"
+        url={baseUrl}
+        canonical={baseUrl}
+        alternateLang={[
+          { lang: "en", url: baseUrl },
+          { lang: "ar", url: `${baseUrl}/ar` }
+        ]}
+        structuredData={structuredData}
+      />
+      <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="relative bg-gradient-hero min-h-[700px] flex items-center overflow-hidden">
         {/* Modern background pattern */}
@@ -318,6 +408,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

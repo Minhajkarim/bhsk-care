@@ -6,10 +6,59 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const FAQ = () => {
   const { t, isRTL } = useLanguage();
+  const baseUrl = 'https://www.bhskforhealthservices.com';
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": t('faq.question1'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.answer1')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('faq.question2'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.answer2')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('faq.question3'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.answer3')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('faq.question4'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.answer4')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('faq.question5'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.answer5')
+        }
+      }
+    ]
+  };
   const faqs = [
     {
       question: t('faq.question1'),
@@ -34,7 +83,21 @@ const FAQ = () => {
   ];
 
   return (
-    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
+    <>
+      <SEO
+        title="FAQ - Frequently Asked Questions | BHSK Health Services Qatar"
+        description="Frequently asked questions about BHSK Health Services in Qatar. Learn about our healthcare services, nursing care, elderly care, physiotherapy, and more. Get answers to common questions about our services."
+        keywords="BHSK Health Services FAQ, healthcare services FAQ Qatar, nursing services questions, elderly care FAQ Qatar, medical services FAQ, healthcare questions Qatar"
+        image="/hero-image.jpg"
+        url={`${baseUrl}/faq`}
+        canonical={`${baseUrl}/faq`}
+        alternateLang={[
+          { lang: "en", url: `${baseUrl}/faq` },
+          { lang: "ar", url: `${baseUrl}/ar/faq` }
+        ]}
+        structuredData={structuredData}
+      />
+      <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
@@ -115,6 +178,7 @@ const FAQ = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,13 +1,51 @@
 import { Heart, Target, Eye, Award, Shield, Clock, Users, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 import nurseImage from "@/assets/nurse-professional.jpg";
 
 const About = () => {
   const { t, isRTL } = useLanguage();
   
+  const baseUrl = 'https://www.bhskforhealthservices.com';
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "MedicalBusiness",
+      "name": "BHSK Health Services",
+      "foundingDate": "2014",
+      "description": "Delivering excellence in healthcare services across Qatar since 2014. Professional healthcare services that improve the quality of life for our clients.",
+      "url": baseUrl,
+      "telephone": "+97431599965",
+      "email": "bhsknursingservices@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Building No 164, Zone 81, Street 29",
+        "addressLocality": "Industrial Area, Ar-Rayyan",
+        "addressRegion": "Qatar",
+        "addressCountry": "QA"
+      }
+    }
+  };
+  
   return (
-    <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
+    <>
+      <SEO
+        title="About BHSK Health Services - Trusted Healthcare Provider in Qatar Since 2014"
+        description="Learn about BHSK Health Services, Qatar's trusted healthcare provider since 2014. We deliver professional, compassionate healthcare services including home nursing, elderly care, and specialized medical care across Qatar."
+        keywords="BHSK Health Services, healthcare provider Qatar, medical services Qatar, nursing services Qatar, about BHSK, healthcare company Qatar, medical care Qatar, trusted healthcare Qatar"
+        image="/nurse-professional.jpg"
+        url={`${baseUrl}/about`}
+        canonical={`${baseUrl}/about`}
+        alternateLang={[
+          { lang: "en", url: `${baseUrl}/about` },
+          { lang: "ar", url: `${baseUrl}/ar/about` }
+        ]}
+        structuredData={structuredData}
+      />
+      <div className={`flex flex-col ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
@@ -260,6 +298,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
