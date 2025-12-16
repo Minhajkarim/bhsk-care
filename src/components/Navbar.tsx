@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 import logo from "@/assets/logo.png";
 
@@ -10,11 +11,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { t } = useLanguage();
+  const { isAdmin, user } = useAuth();
 
   const navLinks = [
     { name: t('nav.home'), path: "/" },
     { name: t('nav.about'), path: "/about" },
     { name: t('nav.services'), path: "/services" },
+    { name: t('nav.blog'), path: "/blog" },
     { name: t('nav.contact'), path: "/contact" },
     { name: t('nav.faq'), path: "/faq" },
   ];
@@ -58,6 +61,19 @@ const Navbar = () => {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageSwitcher />
+            {isAdmin && (
+              <Button 
+                variant="outline" 
+                size="default" 
+                className="border-primary/20 hover:border-primary hover:bg-primary/10 transition-all duration-300" 
+                asChild
+              >
+                <Link to="/admin/dashboard" className="flex items-center">
+                  <Shield className="w-4 h-4 mr-2" />
+                  Admin
+                </Link>
+              </Button>
+            )}
             <a href="tel:+97431599965" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-all duration-300 group">
               <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-2 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
                 <Phone className="w-4 h-4" />
@@ -98,6 +114,19 @@ const Navbar = () => {
                 <div className="mb-4">
                   <LanguageSwitcher />
                 </div>
+                {isAdmin && (
+                  <Button 
+                    variant="outline" 
+                    size="default" 
+                    className="w-full mb-4 border-primary/20 hover:border-primary hover:bg-primary/10 transition-all duration-300" 
+                    asChild
+                  >
+                    <Link to="/admin/dashboard" onClick={() => setIsOpen(false)} className="flex items-center justify-center">
+                      <Shield className="w-4 h-4 mr-2" />
+                      Admin Dashboard
+                    </Link>
+                  </Button>
+                )}
                 <a href="tel:+97431599965" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-all duration-300 mb-4 p-3 rounded-xl hover:bg-primary/5">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mr-3">
                     <Phone className="w-4 h-4" />

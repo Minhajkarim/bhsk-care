@@ -55,7 +55,7 @@ const SEO = ({
 
       {/* Alternate Language Versions */}
       {alternateLang?.map((alt) => (
-        <link key={alt.lang} rel="alternate" hreflang={alt.lang} href={alt.url} />
+        <link key={alt.lang} rel="alternate" hrefLang={alt.lang} href={alt.url} />
       ))}
 
       {/* Structured Data */}

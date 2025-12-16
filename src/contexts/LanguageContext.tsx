@@ -26,6 +26,7 @@ const translations = {
     'nav.home': 'Home',
     'nav.about': 'About Us',
     'nav.services': 'Services',
+    'nav.blog': 'Blog',
     'nav.contact': 'Contact',
     'nav.faq': 'FAQ',
     
@@ -297,6 +298,7 @@ const translations = {
     'nav.home': 'الرئيسية',
     'nav.about': 'من نحن',
     'nav.services': 'الخدمات',
+    'nav.blog': 'المدونة',
     'nav.contact': 'اتصل بنا',
     'nav.faq': 'الأسئلة الشائعة',
     
